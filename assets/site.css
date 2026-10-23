@@ -90,7 +90,7 @@ ul.tabs-list li::before {
 .folder__body { position: absolute; inset: 0; background: var(--c); }
 a.folder:hover .folder__tab { transform: translateY(-8px); }
 a.folder:hover { color: var(--ink); }
-.folder--front { position: relative; top: auto; left: auto; right: auto; margin: 0 7%; }
+.folder.folder--front { position: relative; top: auto; left: auto; right: auto; margin: 0 7%; }
 .folder--front .folder__body { position: relative; inset: auto; }
 .folder--front .folder__body { padding: 36px 32px 64px; display: grid; grid-template-columns: minmax(260px, 1fr) 2fr; gap: 40px; align-content: start; }
 .front__lead { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
@@ -158,7 +158,7 @@ section { position: relative; }
 /* Datos: palabra gigante y barras */
 .data { background: var(--navy-2); }
 .data__col { container-type: inline-size; width: min(640px, 100%); margin: 0 auto; }
-.giant { font-size: 37cqw; line-height: .8; text-transform: uppercase; letter-spacing: -0.04em; margin-bottom: 20px; }
+.giant { font-size: 34cqw; line-height: .8; text-transform: uppercase; letter-spacing: -0.04em; margin-bottom: 20px; }
 .data__intro { margin-bottom: 28px; }
 .bar { background: var(--navy-3); margin-bottom: 6px; }
 .bar summary { list-style: none; display: flex; justify-content: space-between; align-items: center; min-height: 56px; padding: 0 18px; font-weight: 500; cursor: pointer; }
@@ -252,10 +252,10 @@ section { position: relative; }
   .top .mark { grid-column: 1; }
   .top nav { grid-column: 2; gap: 16px; }
   .hero__text { padding-top: 64px; }
-  .hero h1 { font-size: 15vw; }
+  .hero h1 { font-size: 13vw; }
   .hero__lede { font-size: 16px; }
   .stack { margin-top: 64px; padding-top: calc(4 * 52px); }
-  .folder--front { margin: 0; }
+  .folder.folder--front { margin: 0; top: auto; }
   .folder { left: 0; right: 0; top: calc(var(--i) * 52px); }
   .folder__tab { top: -32px; height: 32px; font-size: 15px; padding: 8px 16px 0; left: var(--xm, var(--x)); }
   .folder--front .folder__body { grid-template-columns: 1fr; padding: 28px 16px 40px; gap: 24px; }
@@ -272,12 +272,14 @@ section { position: relative; }
   .stages li:nth-child(n) { text-align: left; }
   .how__clause { padding: 28px 16px 56px; }
   .how__clause h2 { font-size: 9vw; }
-  .brands__stage { grid-template-columns: 1fr; min-height: 0; padding: 72px 0 56px; }
+  .brands__stage { grid-template-columns: minmax(0, 1fr); min-height: 0; padding: 72px 0 56px; }
+  .brands__list, .brands__fact { min-width: 0; }
   .brands__disc, .brands__obj { position: relative; left: auto; top: auto; transform: none; margin: 0 auto; }
   .brands__disc { width: 86vw; }
   .brands__obj { width: 66vw; margin-top: calc(-86vw * 1.08 + 10vw); margin-bottom: 18vw; }
   .brands__list { padding: 32px 16px 0; }
-  .brands__list ul { display: flex; gap: 24px; overflow-x: auto; }
+  .brands__list ul { display: flex; gap: 24px; overflow-x: auto; scrollbar-width: none; }
+  .brands__list ul::-webkit-scrollbar { display: none; }
   .brands__list button { white-space: nowrap; font-size: 26px; }
   .brands__fact { position: static; width: auto; padding: 18px 16px 0; font-size: 16px; }
   .faq__grid { grid-template-columns: 1fr; }
