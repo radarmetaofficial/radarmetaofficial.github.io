@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publicador Videos · Cómo funciona</title>
+<meta name="description" content="Herramienta personal que lleva los vídeos terminados de tres marcas a Instagram, TikTok y YouTube Shorts.">
+<link rel="icon" type="image/png" href="img/icono.png">
+<link rel="alternate" hreflang="en" href="en/index.html">
+<link rel="preload" href="fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+<meta name="theme-color" content="#0A2140">
+</head>
+<body>
+<div id="top"></div><header class="top">
+  <a class="mark" href="index.html"><img src="img/icono.png" alt="" width="30" height="30">Publicador Videos</a>
+  <nav aria-label="Legal"><a href="en/index.html" hreflang="en">English</a></nav>
+</header>
+<main>
+<section class="hero">
+  <div class="hero__text"><h1 class="rise">Publicador</h1><p class="hero__lede rise" style="--d:90ms">Lleva cada vídeo terminado desde su carpeta hasta Instagram, TikTok y YouTube Shorts. Lo usa una sola persona, para sus propias cuentas.</p></div>
+  <div class="stack"><a class="folder" style="--i:0;--c:var(--accent);--x:78%;--xm:50%;--t:var(--ink-dark)" href="#contacto"><span class="folder__tab">Contacto</span><span class="folder__body"></span></a><a class="folder" style="--i:1;--c:#2A5A8C;--x:62%;--xm:8%" href="#preguntas"><span class="folder__tab">Preguntas</span><span class="folder__body"></span></a><a class="folder" style="--i:2;--c:var(--navy-2);--x:44%;--xm:56%" href="#datos"><span class="folder__tab">Datos</span><span class="folder__body"></span></a><a class="folder" style="--i:3;--c:var(--cream);--x:22%;--xm:34%;--t:var(--ink-dark)" href="#marcas"><span class="folder__tab">Las marcas</span><span class="folder__body"></span></a><div class="folder folder--front" style="--i:4;--c:var(--navy-3);--x:4%;--xm:0%">
+  <a class="folder__tab" href="#como">Cómo funciona</a>
+  <div class="folder__body">
+    <div class="front__lead rise"><span class="front__path">publicar/NNN-tema/</span><p>Cada vídeo vive en su carpeta, con el vídeo y su descripción. Publicador la lee y la sube a la red que toca.</p><a class="btn" href="#como">Ver cómo funciona</a></div>
+    <div class="reels"><figure class="reel rise" style="--d:120ms"><div class="folder-mask"><img src="img/008.webp" alt="Fotograma del vídeo 008 de @unporquecadadia" width="540" height="960"></div><figcaption>008-por-que-odias-tu-voz/</figcaption></figure><figure class="reel rise" style="--d:200ms"><div class="folder-mask"><img src="img/010.webp" alt="Fotograma del vídeo 010 de @unporquecadadia" width="540" height="960"></div><figcaption>010-por-que-estornudas-al-sol/</figcaption></figure><figure class="reel rise" style="--d:280ms"><div class="folder-mask"><img src="img/012.webp" alt="Fotograma del vídeo 012 de @unporquecadadia" width="540" height="960"></div><figcaption>012-por-que-el-cafe-te-da…/</figcaption></figure><figure class="reel rise" style="--d:360ms"><div class="folder-mask"><video src="video/014.mp4" poster="video/014-poster.webp" autoplay muted loop playsinline width="360" height="640" aria-label="Fotograma del vídeo 014 de @unporquecadadia"></video></div><figcaption>014-por-que-la-bateria…/</figcaption></figure></div>
+  </div>
+</div></div>
+</section>
+<section class="how" id="como" data-how>
+  <script type="application/json">[{"name": "Carpeta", "title": "Primero, la carpeta del vídeo", "text": "Cuando un vídeo está terminado y revisado, queda en su propia carpeta con dos archivos: el vídeo y el texto que lo acompaña.", "term": "<span class=p>PS&gt;<\/span> ls publicar\\014-por-que-la-bateria-pasa-del-20-al-1\n\n  video.mp4         21,3 MB   1080 × 1920\n  descripcion.txt   684 caracteres\n"}, {"name": "En seco", "title": "Después, una prueba en seco", "text": "Antes de subir nada, Publicador comprueba la cuenta, el vídeo y la descripción. Si algo no cumple las normas de la red, se para aquí.", "term": "<span class=p>PS&gt;<\/span> python scripts\\instagram.py subir unporquecadadia publicar\\014-…\n\n@unporquecadadia ← video.mp4 (21.3 MB), descripción de 684 caracteres\n<span class=dim>Prueba en seco: no se ha subido nada. Añade --publicar para publicarlo de verdad.<\/span>\n"}, {"name": "Publicación", "title": "Luego, la publicación revisada", "text": "Solo con la orden explícita de publicar se sube el vídeo. Instagram y YouTube lo procesan y lo publican en la cuenta de su marca.", "term": "<span class=p>PS&gt;<\/span> python scripts\\instagram.py subir unporquecadadia publicar\\014-… --publicar\n\nSubiendo el vídeo…\n<span class=ok>Publicado en @unporquecadadia<\/span>\n"}, {"name": "Borrador", "title": "Y en TikTok, un borrador", "text": "En TikTok el vídeo llega como borrador a la bandeja de la cuenta. La publicación final se hace a mano, desde la app.", "term": "<span class=p>PS&gt;<\/span> python scripts\\tiktok.py subir gym.conciencia publicar\\…\n\n<span class=ok>Enviado a los borradores de @gym.conciencia<\/span>\n<span class=dim>Ábrelo en la app de TikTok para revisarlo y publicarlo.<\/span>\n"}]</script>
+  <div class="how__split">
+    <div class="how__clause"><h2 class="rise" data-how-title>Primero, la carpeta del vídeo</h2><p class="rise" style="--d:90ms" data-how-text>Cuando un vídeo está terminado y revisado, queda en su propia carpeta con dos archivos: el vídeo y el texto que lo acompaña.</p></div>
+    <div class="how__ui"><div class="term rise" data-ui><pre data-how-term><span class=p>PS&gt;</span> ls publicar\014-por-que-la-bateria-pasa-del-20-al-1
+
+  video.mp4         21,3 MB   1080 × 1920
+  descripcion.txt   684 caracteres
+</pre><div class="term__thumb"><div class="folder-mask"><img src="img/014.webp" alt="Fotograma del vídeo 014 de @unporquecadadia" width="540" height="960" loading="lazy"></div></div></div></div>
+  </div>
+  <div class="how__control">
+    <label class="sr" for="fase">Fase del proceso</label>
+    <div class="range-wrap" data-range><span class="range-fill" aria-hidden="true"></span><input class="range" id="fase" type="range" min="0" max="3" step="1" value="0" aria-valuetext="Carpeta"></div>
+    <ol class="stages"><li class="on"><button type="button">Carpeta</button></li><li class=""><button type="button">En seco</button></li><li class=""><button type="button">Publicación</button></li><li class=""><button type="button">Borrador</button></li></ol>
+  </div>
+</section>
+<section class="brands" id="marcas" data-brands>
+  <script type="application/json">{"unporquecadadia": {"name": "Un Porqué Cada Día", "img": "img/unporquecadadia.webp", "colour": "#FF7A2F", "alt": "Logo de Un Porqué Cada Día: una interrogación naranja con un anillo", "fact": "<strong>Curiosidades con ciencia, en un minuto.<\/strong><ul class=tabs-list><li>Instagram @unporquecadadia<\/li><li>TikTok @unporquecadadia<\/li><li>YouTube @unporquecadadia<\/li><\/ul>"}, "radarmeta": {"name": "RadarMeta", "img": "img/radarmeta.webp", "colour": "#1E4874", "alt": "Logo de RadarMeta: las letras RM dentro de un anillo", "fact": "<strong>Cada parche de League of Legends, explicado con datos.<\/strong><ul class=tabs-list><li>Instagram @radarmeta<\/li><li>TikTok @radar.meta<\/li><li>YouTube @RadarMeta<\/li><\/ul>"}, "gym_conciencia": {"name": "Gym con Ciencia", "img": "img/gym_conciencia.webp", "colour": "#0A2140", "alt": "Logo de Gym con Ciencia: Álex, el entrenador dibujado, con un aro naranja", "fact": "<strong>Mitos del gimnasio, desmontados con estudios.<\/strong><ul class=tabs-list><li>Instagram @gym_conciencia<\/li><li>TikTok @gym.conciencia<\/li><li>YouTube @gym_conciencia<\/li><\/ul>"}}</script>
+  <div class="brands__stage">
+    <div class="brands__disc folder-mask" style="--bc:#FF7A2F" aria-hidden="true"></div>
+    <div class="brands__obj"><img data-brand-img src="img/unporquecadadia.webp" alt="Logo de Un Porqué Cada Día: una interrogación naranja con un anillo" width="640" height="640" loading="lazy"></div>
+    <div class="brands__list"><h2 class="rise">Tres marcas</h2><ul class="rise" style="--d:90ms"><li><button type="button" data-brand="unporquecadadia" aria-pressed="true">Un Porqué Cada Día</button></li><li><button type="button" data-brand="radarmeta" aria-pressed="false">RadarMeta</button></li><li><button type="button" data-brand="gym_conciencia" aria-pressed="false">Gym con Ciencia</button></li></ul></div>
+    <div class="brands__fact rise" style="--d:160ms" data-brand-fact aria-live="polite"><strong>Curiosidades con ciencia, en un minuto.</strong><ul class=tabs-list><li>Instagram @unporquecadadia</li><li>TikTok @unporquecadadia</li><li>YouTube @unporquecadadia</li></ul></div>
+  </div>
+</section>
+<section class="data" id="datos">
+  <div class="wrap"><div class="data__col">
+    <h2 class="giant rise">Datos</h2>
+    <p class="data__intro rise" style="--d:90ms">Publicador no tiene servidor ni base de datos en internet. Todo lo que guarda está en el ordenador de quien lo usa. <a href="privacidad.html">Privacidad →</a></p>
+    <details class="bar rise" style="--d:0ms" open><summary>Llaves de acceso</summary><div class="bar__panel"><dl><dt>Instagram</dt><dd>60 días, renovables</dd><dt>TikTok</dt><dd>24 h; renovación, 1 año</dd><dt>YouTube</dt><dd>Hasta que se retire el permiso</dd><dt>Dónde</dt><dd>Solo en el ordenador</dd></dl></div></details><details class="bar rise" style="--d:60ms"><summary>Identidad de la cuenta</summary><div class="bar__panel"><dl><dt>ID de usuario o de canal</dt><dd>Para saber a qué cuenta subir</dd><dt>Nombre de usuario</dt><dd>Para comprobarla</dd><dt>Foto y nombre visible (TikTok)</dt><dd>Solo se muestran, no se guardan</dd></dl></div></details><details class="bar rise" style="--d:120ms"><summary>Vídeos y descripciones</summary><div class="bar__panel"><dl><dt>Origen</dt><dd>Carpeta publicar/ del propio proyecto</dd><dt>Destino</dt><dd>Solo la cuenta de su marca</dd><dt>Copia en la herramienta</dt><dd>Ninguna</dd></dl></div></details><details class="bar rise" style="--d:180ms"><summary>Registros</summary><div class="bar__panel"><dl><dt>Renovación de llaves</dt><dd>Fecha y «OK» por cuenta</dd><dt>Dónde</dt><dd>Solo en el ordenador</dd></dl></div></details><details class="bar rise" style="--d:240ms"><summary>Lo que no se recoge</summary><div class="bar__panel"><dl><dt>Seguidores, mensajes, comentarios</dt><dd>Nunca</dd><dt>Datos de otras personas</dt><dd>Nunca</dd><dt>Venta o cesión de datos</dt><dd>Nunca</dd></dl></div></details><details class="bar rise" style="--d:300ms"><summary>Esta web</summary><div class="bar__panel"><dl><dt>Cookies</dt><dd>Ninguna</dd><dt>Analítica o rastreo</dt><dd>Ninguno</dd><dt>Fuentes y archivos</dt><dd>Alojados aquí mismo</dd></dl></div></details>
+  </div></div>
+</section>
+<section class="faq" id="preguntas">
+  <div class="wrap faq__grid"><h2 class="rise">Preguntas</h2><div><details class="tile rise" name="faq" style="--d:0ms"><summary>¿Qué es Publicador Videos?<span class="pm" aria-hidden="true"></span></summary><div class="tile__a"><p>Una herramienta personal, sin interfaz pública, que sube los vídeos ya terminados de tres marcas a sus propias cuentas de Instagram, TikTok y YouTube.</p></div></details><details class="tile rise" name="faq" style="--d:50ms"><summary>¿Puede usarla otra persona?<span class="pm" aria-hidden="true"></span></summary><div class="tile__a"><p>No. No hay registro ni usuarios externos: solo funciona con las cuentas de sus marcas, que han dado permiso expresamente.</p></div></details><details class="tile rise" name="faq" style="--d:100ms"><summary>¿Publica algo sin que se revise?<span class="pm" aria-hidden="true"></span></summary><div class="tile__a"><p>No. Cada vídeo se revisa antes y solo se publica con una orden explícita. En TikTok ni siquiera eso: llega como borrador y se publica a mano desde la app.</p></div></details><details class="tile rise" name="faq" style="--d:150ms"><summary>¿Dónde se guardan las llaves de acceso?<span class="pm" aria-hidden="true"></span></summary><div class="tile__a"><p>En el ordenador de quien la usa, en una carpeta fuera de cualquier proyecto o repositorio. Nunca se suben a internet ni se publican.</p></div></details><details class="tile rise" name="faq" style="--d:200ms"><summary>¿Guarda datos de otras personas?<span class="pm" aria-hidden="true"></span></summary><div class="tile__a"><p>No. Solo trata datos de las propias cuentas: su identificador, su nombre de usuario y las llaves de acceso.</p></div></details><details class="tile rise" name="faq" style="--d:250ms"><summary>¿Qué permisos pide en cada red?<span class="pm" aria-hidden="true"></span></summary><div class="tile__a"><p>Instagram: leer el perfil básico y publicar contenido. TikTok: leer el perfil básico y enviar vídeos a borradores. YouTube: subir vídeos al canal.</p></div></details><details class="tile rise" name="faq" style="--d:300ms"><summary>¿Cómo se desconecta una cuenta?<span class="pm" aria-hidden="true"></span></summary><div class="tile__a"><p>Desde cada red se puede retirar el permiso en cualquier momento; la página de privacidad explica dónde. Al retirarlo, la llave deja de funcionar al instante.</p></div></details><details class="tile rise" name="faq" style="--d:350ms"><summary>¿Usa cookies esta web?<span class="pm" aria-hidden="true"></span></summary><div class="tile__a"><p>No. Ni cookies, ni analítica, ni fuentes o scripts de terceros. Todo lo que ves se sirve desde aquí.</p></div></details></div></div>
+</section>
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <div class="coupon rise">
+      <div class="coupon__left"><h2>Escribe al responsable</h2><p>Para preguntas sobre la herramienta, los datos o retirar un permiso. Se abrirá tu programa de correo con el mensaje preparado.</p></div>
+      <form data-mailto="radarmeta.official@gmail.com" data-subject="Publicador Videos" action="mailto:radarmeta.official@gmail.com" method="post" enctype="text/plain">
+        <label class="sr" for="c-name">Tu nombre</label><input id="c-name" name="name" placeholder="Tu nombre" autocomplete="name" required>
+        <label class="sr" for="c-email">Tu correo</label><input id="c-email" name="email" type="email" placeholder="Tu correo" autocomplete="email" required>
+        <label class="sr" for="c-topic">Tema</label><select id="c-topic" name="topic"><option>Privacidad o datos</option><option>Retirar un permiso</option><option>Otra consulta</option></select>
+        <label class="sr" for="c-msg">Tu mensaje</label><textarea id="c-msg" name="message" placeholder="Tu mensaje" required></textarea>
+        <button class="btn btn--dark" type="submit">Preparar el correo</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="foot">
+  <div class="blocks" role="img" aria-label="Publicador"><span style="--b:#FF7A2F;height:100%;--hm:80%" aria-hidden="true">P</span><span style="--b:#F4F1EA;height:78%;--hm:58%" aria-hidden="true">U</span><span style="--b:#7FA3CC;height:92%;--hm:72%" aria-hidden="true">B</span><span style="--b:#F4F1EA;height:64%;--hm:55%" aria-hidden="true">L</span><span style="--b:#FF7A2F;height:86%;--hm:66%" aria-hidden="true">I</span><span style="--b:#F4F1EA;height:100%;--hm:80%" aria-hidden="true">C</span><span style="--b:#7FA3CC;height:70%;--hm:55%" aria-hidden="true">A</span><span style="--b:#FF9A5C;height:94%;--hm:74%" aria-hidden="true">D</span><span style="--b:#F4F1EA;height:82%;--hm:62%" aria-hidden="true">O</span><span style="--b:#FF7A2F;height:74%;--hm:55%" aria-hidden="true">R</span></div>
+  <div class="foot__links">
+    <div><a href="index.html#como">Cómo funciona</a><a href="index.html#preguntas">Preguntas</a></div>
+    <div><a href="privacidad.html">Privacidad</a><a href="condiciones.html">Condiciones</a></div>
+    <div><a href="https://www.instagram.com/unporquecadadia/">Un Porqué Cada Día</a><a href="https://www.instagram.com/radarmeta/">RadarMeta</a><a href="https://www.instagram.com/gym_conciencia/">Gym con Ciencia</a></div>
+    <div><a href="en/index.html" hreflang="en">English</a></div>
+    <div class="contact-lines"><a href="mailto:radarmeta.official@gmail.com">radarmeta.official@gmail.com</a><span>Herramienta personal · sin cookies</span></div>
+  </div>
+  <div class="foot__last"><span>© 2026 Publicador Videos</span><a class="btn btn--dark" href="#top">Volver arriba</a></div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>
